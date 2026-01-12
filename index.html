@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumit Diware's Webpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+    
+	<style>
+	
+        body { font-family: 'Arial', sans-serif; background-color: #f8f9fa; }
+
+	    .container {max-width: 1180px;}
+		
+		.footer { padding: 20px 0; color: #6c757d; font-size: 0.9em; }
+		
+				
+		h2[id], h3[id], h5[id], p[id] {scroll-margin-top: 90px;}
+		
+		.navbar-nav .nav-item {	margin-right: 30px;}
+		.navbar-nav .nav-item:last-child {margin-right: 0;}
+		
+		/* The brand always occupies space to prevent menu shifting */
+		#navbarBrandName {
+			transition: opacity 0.2s ease-in-out;
+			pointer-events: auto;
+		}
+
+		/* This class will be toggled by JavaScript */
+		.brand-hidden {
+			opacity: 0 !important;
+			pointer-events: none !important;
+		}
+		
+        .profile-photo { max-width: 213px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        
+		.tab-content-section {
+            padding: 40px 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            min-height: 65vh; /* Ensure content section takes up screen space */  }
+        
+		.news-item { border-left: 3px solid #007bff; padding-left: 15px; margin-bottom: 20px; }
+        .news-date { font-weight: bold; color: #6c757d; display: block; margin-bottom: 5px; }
+		
+		.alumni-list {list-style: none; padding: 0; column-count: 4; column-gap: 20px;}
+		/* Responsive adjustment for smaller screens */
+		@media (max-width: 768px) {.alumni-list {column-count: 2;} }
+		
+    
+		#publications {margin: 0; padding: 0;}
+		.pub-list-grid {list-style: none; padding-left: 0; margin-left: 0; padding-top: 0 }
+		.pub-entry {display: grid; grid-template-columns: 160px 1fr; column-gap: 40px; 
+			margin-bottom: 20px; line-height: 1.5; padding-left: 0; padding-top: 0}
+		.pub-identifier {grid-column: 1;  text-align: left; 
+			font-weight: bold; color: #4B0082; font-size: 1em;
+			margin-left: 10px; padding-top: 1px}
+		.pub-details { grid-column: 2; font-weight: normal;  padding-top: 0}
+		.pub-details strong { font-weight: bold;}
+		.pub-details em {font-style: italic; font-weight: normal;}
+	</style>
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+        <div class="container">
+			<a class="navbar-brand" href="#" id="navbarBrandName"> Sumit Diware</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav nav-pills" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="pills-about-tab" data-bs-toggle="pill" data-bs-target="#pills-about" type="button" role="tab" aria-controls="pills-about" aria-selected="true">About</a>
+                    </li>
+                    
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-research-tab" data-bs-toggle="pill" data-bs-target="#pills-research" type="button" role="tab" aria-controls="pills-research" aria-selected="false">Research</a>
+                    </li>
+					
+					<li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-publications-tab" data-bs-toggle="pill" data-bs-target="#pills-publications" type="button" role="tab" aria-controls="pills-publications" aria-selected="false">Publications</a>
+                    </li>
+					
+					<li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-teaching-tab" data-bs-toggle="pill" data-bs-target="#pills-teaching" type="button" role="tab" aria-controls="pills-teaching" aria-selected="false">Teaching</a>
+                    </li>
+					
+					<li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-services-tab" data-bs-toggle="pill" data-bs-target="#pills-services" type="button" role="tab" aria-controls="pills-services" aria-selected="false">Activities</a>
+                    </li>
+					
+					
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="tab-content" id="pills-tabContent">
+
+            <div class="tab-pane fade show active tab-content-section" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
+                <div class="row align-items-top gx-5">
+					<div class="col-md-auto">
+						<img src="./img/sumit-photo.jpg" class="profile-photo" alt="Profile Photo">
+						
+						<div style="margin-top: 1em; margin-left: 10px;">
+							<p style="margin-bottom: 1em; font-size: 14px;">
+								<i class="fa-solid fa-envelope" style="width: 20px; color: #4B0082;"></i>
+								<a href="mailto:sumit.diware@ece.iitr.ac.in" style="text-decoration: none; color: #4B0082;"> sumit.diware@ece.iitr.ac.in</a>
+							</p>
+							<p style="margin-bottom: 1em; font-size: 14px; color: #4B0082;">
+								<i class="fa-solid fa-location-dot" style="width: 20px;"></i> 
+								N-115, Ground Floor, ECE
+							</p>
+							<p style="font-size: 14px;">
+								<i class="fa-solid fa-link" style="width: 20px; color: #4B0082;"></i> 
+								<a href="https://scholar.google.com/citations?user=oc6_HeMAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #4B0082;">Google scholar profile</a>
+							</p>
+						</div>
+					</div>
+					
+					<!--  color: #2E0854" #002147-->
+                    <div class="col pe-md-5">
+                        <h2 style="margin-right: 0px; color: #00477A;"><strong>Sumit Diware</strong></h2>
+                        
+						<p style="margin-bottom: 1.25em; margin-top: 1.25em; text-align: justify;"> I am an Assistant Professor in the Electronics and Communication Engineering 
+						(ECE) Department at Indian Institute of Technology (IIT) Roorkee.</p>				
+						
+						<p style="margin-bottom: 1.25em; text-align: justify;"> 
+						My research focuses on AI-oriented hardware design, where I explore how emerging computing paradigms and memory technologies can be leveraged to shape the next-generation AI hardware. 
+						Under this scope, I currently work on hardware-algorithm co-design and system-on-chip architectures for memristor-based computation-in-memory.
+						</p>
+						
+						<p style="margin-bottom: 2.25em; text-align: justify;"> I obtained my Ph.D. in Computer Engineering from Delft University of Technology (TU Delft), Netherlands. 
+						For my doctoral work, I received European Design and Automation Association (EDAA) Outstanding Dissertation Award at DATE-2025 conference. 
+						Before that, I completed M.Tech. in VLSI Design Tools and Technology from IIT Delhi with sponsorship from Qualcomm. 
+						</p>
+					
+                    </div>
+					
+                </div>					
+								
+            </div>
+			
+			
+			<div class="tab-pane fade tab-content-section" id="pills-research" role="tabpanel" aria-labelledby="pills-research-tab">
+                <h2 id="overview" class="mb-4 border-bottom pb-2" style="color: #00477A;"><strong>Overview</strong></h2>
+                <div class="mt-4">
+					<p style="margin-bottom: 0.8em; margin-right: 100px; margin-top: -0.8em; text-align: justify;"> 
+					Artificial intelligence (AI) execution on end-user devices instead of cloud servers is known as edge-AI. 
+					This approach offers several key benefits like lower latency, reduced network costs, data privacy, and better reliability. 
+					However, edge devices have very limited resources such as energy, area, compute capability, etc.
+					As a result, traditional computing architectures and memory technologies struggle to run AI efficiently at the edge.
+					Hence, we need to explore new computing architectures and memory technologies to build AI hardware for edge platforms.</p>
+					
+					<p style="margin-bottom: 3em; margin-right: 100px; text-align: justify;"> <i><strong>My research explores 
+					emerging computing architectures & memory technologies to deploy AI workloads effectively on edge devices.</strong></i></p>
+
+				</div>
+				
+
+                <h2 id="current-research" class="mt-4 border-bottom pb-2" style="color: #00477A;"><strong>Current Research</strong></h2>
+				<div class="mt-4">
+					<p style="margin-bottom: 0.5em; margin-top: -0.8em; text-align: justify;"> 
+					I am currently working on the following broad research themes:
+					</p> 					
+					
+					<ul style="margin: 0px; padding-left: 25px;margin-bottom:1em;">
+						<li style="margin-bottom:0.9em;">
+							<strong>Specialized Hardware Architectures for Edge-AI</strong> <br>
+							<i>Design energy-efficient, scalable, and robust edge hardware for various target AI applications e.g. NLP.</i><br>
+						</li>
+						<li style="margin-bottom:0.9em;">
+							<strong>Advanced Neuromorphic Hardware Architectures</strong> <br>
+							<i>Design next-gen AI hardware features like ultra energy-efficient spiking computation,
+							adaptive on-chip learning, etc.</i> <br>
+						</li>
+						<li>
+							<strong>System-Level Frameworks for AI Hardware Design</strong> <br>
+							<i>Develop design tools to facilitate effective hardware design and/or workload deployment on edge-AI.</i> <br>
+						</li>
+					</ul>					
+				</div>	
+				
+				<p style="margin-bottom: 0.2em;">
+				Under the above themes, I primarily focus on <strong> Computation-In-Memory (CIM) </strong> using <strong> Memristor Device Technologies</strong>.
+				</p>
+				
+				<p style="margin-bottom: 3em;">
+				I also occasionally explore fully-digital systems in this context whenever a promising opportunity arises.
+				</p>
+				
+				
+				<h2 id="explore" class="mt-4 border-bottom pb-2" style="color: #00477A;"><strong>Explore More</strong></h2>
+			    <p style="margin-bottom: 0.3em;">Here is some (older) literature that provides computation-in-memory basics:
+					<a href="https://doi.org/10.1109/MCAS.2021.3092533" style="color: #4B0082;">CIM-survey</a>,
+					<a href="https://doi.org/10.1109/ISCA.2016.12" style="color: #4B0082;">CIM-architecture</a>,
+					<a href="https://doi.org/10.1002/admt.201800589" style="color: #4B0082;">Memristor-devices</a>
+				</p>
+				  
+				<p>To know more about my research work, please check out my
+				  <a href="javascript:void(0)"  onclick="goToSection('pills-publications-tab', 'pubs')" 
+					style="color: #4B0082; text-decoration: underline;">
+					publications</a>
+				    and 
+				  <a href="https://doi.org/10.4233/uuid:fe563dc8-6515-41d3-8d84-d86608ac0fc6" style="color: #4B0082;"> doctoral thesis</a>. </p>				
+            </div>
+
+
+
+            <div class="tab-pane fade tab-content-section" id="pills-publications" role="tabpanel" aria-labelledby="pills-publications-tab">
+                
+				<p id="pubs" style="margin-bottom: 3em; text-align: justify;"> Some of my selected publications are listed below. The complete publication list is available
+				<a href="./docs/SSD_pub_list.pdf" class="text" style="color: #4B0082;"> here</a>.</p>
+                
+				<ul class="pub-list-grid">
+					<li class="pub-entry">
+						<a href="javascript:void(0);" class="pub-identifier">[UNDER-REVIEW]</a>
+						<div class="pub-details">
+							<strong>Detection of Read-disturb Effects in RRAM-based Computation-In-Memory Architectures for Neural Networks</strong> <br>
+							M. A. Yaldagard, A. Bende, <strong>S. Diware</strong>, V. Rana, S. Hamdioui, and R. Bishnoi
+							<br>
+							<em>IEEE Transactions on Circuits and Systems I (TCAS-I)</em>, 2026 
+						</div>
+					</li>
+					
+					<li class="pub-entry">
+						<a href="https://doi.org/10.23919/DATE64628.2025.10993026" class="pub-identifier">[DATE'25]</a> 
+						<div class="pub-details">
+							<strong>Adaptive Multi-Threshold Encoding for Energy-Efficient ECG Classification Architecture using Spiking Neural Network</strong> <br>
+							<strong>S. Diware</strong>, Y. Dong, M. A. Yaldagard, S. Hamdioui, and R. Bishnoi
+							<br>
+							<em>IEEE Design, Automation & Test in Europe Conference (DATE)</em>, 2025
+						</div>
+					</li>
+					
+					<li class="pub-entry">
+						<a href="https://www.headhousebooks.com/book/9783032062857" class="pub-identifier">[SPRN'25]</a> 
+						<div class="pub-details">
+							<strong>Computation-In-Memory for Reliable and Energy-Efficient Diabetic Retinopathy Screening</strong> <br>
+							<strong>S. Diware</strong>, K. Chilakala, and R. Bishnoi
+							<br>
+							<em>Smart and Connected Health: AI, IoT, and Trustworthy Technologies, Springer Nature Switzerland</em>, 2025
+						</div>
+					</li>
+					
+					<li class="pub-entry">
+						<a href="https://doi.org/10.1109/ICCAD66269.2025.11240934" class="pub-identifier">[ICCAD'25]</a> 
+						<div class="pub-details">
+							<strong>Continuous On-Chip Learning in Neural Networks using SOT-MRAM based CIM Architectures</strong> <br>
+							A. Sehgal, S. Soni, <strong>S. Diware</strong>, A. K. Shukla, S. Roy, and R. Bishnoi
+							<br>
+							<em>IEEE/ACM International Conference on Computer-Aided Design (ICCAD)</em>, 2025
+						</div>
+					</li>
+					
+					
+					<li class="pub-entry">
+						<a href="javascript:void(0);" class="pub-identifier">[DAC'25]</a> 
+						<div class="pub-details">
+							<strong>Enhancing Parallelism and Energy-Efficiency in SOT-MRAM based CIM Architecture for On-Chip Learning</strong> <br>
+							A. Sehgal, A. K. Shukla, <strong>S. Diware</strong>, S. Soni, S. Dhull, S. Shreya, S. Roy, and R. Bishnoi
+							<br>
+							<em>ACM/IEEE Design Automation Conference (DAC)</em>, 2025
+						</div>
+					</li>
+																		
+					<li class="pub-entry">
+						<a href="https://doi.org/10.1145/3676536.3698023" class="pub-identifier">[ICCAD'24]</a> 
+						<div class="pub-details">
+							<strong>Hardware-Aware Quantization for Accurate Memristor-Based Neural Networks</strong> <br>
+							<strong>S. Diware</strong>, M. A. Yaldagard, and R. Bishnoi
+							<br>
+							<em>IEEE/ACM International Conference on Computer-Aided Design (ICCAD)</em>, 2024
+						</div>
+					</li>	
+					
+					<li class="pub-entry">
+						<a href="https://doi.org/10.1109/TBCAS.2023.3242683" class="pub-identifier">[TBCAS'23]</a> 
+						
+						<div class="pub-details">
+							<strong>Severity-Based Hierarchical ECG Classification Using Neural Networks</strong> <br>
+							<strong>S. Diware</strong>, S. Dash, A. Gebregiorgis, R. V. Joshi, C. Strydis, S. Hamdioui, and R. Bishnoi
+							<br>
+							<em>IEEE Transactions on Biomedical Circuits and Systems (TBioCAS)</em>, 2023
+						</div>
+					</li>
+					
+					<li class="pub-entry">
+						<a href="https://doi.org/10.1109/AICAS57966.2023.10168661" class="pub-identifier">[AICAS'23]</a> 
+						<div class="pub-details">
+							<strong>Mapping-Aware Biased Training for Accurate Memristor-Based Neural Networks</strong> <br>
+							<strong>S. Diware</strong>, A. Gebregiorgis, R. V. Joshi, S. Hamdioui, and R. Bishnoi
+							<br>
+							<em>IEEE International Conference on Artificial Intelligence Circuits and Systems (AICAS)</em>, 2023
+						</div>
+					</li>
+					
+					<li class="pub-entry">
+						<a href="https://doi.org/10.1109/TETCI.2022.3191397" class="pub-identifier">[TETCI'22]</a> 
+						
+						<div class="pub-details">
+							<strong>Accurate and Energy-Efficient Bit-Slicing for RRAM-Based Neural Networks</strong> <br>
+							<strong>S. Diware</strong>, A. Singh, A. Gebregiorgis, R. V. Joshi, S. Hamdioui, and R. Bishnoi
+							<br>
+							<em>IEEE Transactions on Emerging Topics in Computational Intelligence (TETCI)</em>, 2022 
+						</div>
+					</li>
+					
+				</ul>
+				
+            </div>
+			
+			
+			
+			<div class="tab-pane fade tab-content-section" id="pills-teaching" role="tabpanel" aria-labelledby="pills-teaching-tab">
+                
+				<h2 class="mb-4 border-bottom pb-2 " style="color: #00477A;"><strong>Courses</strong></h2>
+				<p style="margin-bottom: 3em; margin-top: -0.8em;"> To be updated </p>
+			
+				<h2 class="mb-4 border-bottom pb-2" style="color: #00477A;"><strong>Supervision</strong></h2>
+				<h5 style="margin-top: -0.5em;"> <strong> M.Sc. Alumni (TU Delft)</strong>:</h5>
+					<ul class="alumni-list" style="margin-top: -0.5em;">
+					  <li>Manasi Diwate (2025)</li>
+					  <li>Huixuan Wu (2025)</li>
+					  <li>Siyuan Yu (2025)</li>
+					  <li>Yingzhou Dong (2023)</li>
+					  <li>Varun Sudhakar (2022)</li>
+					  <li>Koteswararao Chilakala (2021)</li>
+					  <li>Sudeshna Dash (2021)</li>
+					</ul>				
+            </div>
+			
+			
+			<div class="tab-pane fade tab-content-section" id="pills-services" role="tabpanel" aria-labelledby="pills-services-tab">
+			
+                <h2 class="mb-4 border-bottom pb-2 " style="color: #00477A;"><strong>Peer-Review</strong></h2>
+				
+				<ul style="margin-top: -0.8em; margin-bottom: 3em; padding-left: 25px;">
+					<li style="margin-bottom:0.5em;">
+						ACM/IEEE Design Automation Conference (DAC)
+					</li>
+					
+					<li style="margin-bottom:0.5em;">
+						ACM/IEEE International Conference on Computer Aided Design (ICCAD)
+					</li>
+					
+					<li style="margin-bottom:0.5em;">
+						IEEE Design, Automation & Test in Europe Conference (DATE)
+					</li>
+					
+					<li style="margin-bottom:0.5em;">
+						IEEE Transactions on Circuits and Systems I: Regular Papers (TCAS-I)
+					</li>
+					
+					<li style="margin-bottom:0.5em;">
+						IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)
+					</li>
+					
+					<li style="margin-bottom:0.5em;">
+						IEEE Transactions on Emerging Topics in Computational Intelligence (TETCI)
+					</li>
+					
+					<li>
+						Springer Nature Biomedical Engineering Letters (BMEL)
+					</li>
+
+				</ul>
+				
+				<h2 class="mb-4 border-bottom pb-2" style="color: #00477A;"><strong>Invited Talks</strong></h2>
+				
+				<ul style="margin-top: -0.8em; padding-left: 25px;">
+					<li style="margin-bottom:0.5em;">
+						<strong>[2025]&nbsp;&nbsp;MiM Webinar by Heidelberg University, Germany</strong>, 
+						<i>"Hardware-Aware Quantization for Memristor-Based Neural Networks"</i> 
+					</li>
+					<li style="margin-bottom:0.5em;">
+						<strong>[2025]&nbsp;&nbsp;Fraunhofer Institute for Integrated Circuits, Germany</strong>, 
+						<i>"Hardware-Aware Quantization for Memristor-Based Neural Networks"</i>
+					</li>
+					<li style="margin-bottom:0.5em;">
+						<strong>[2024]&nbsp;&nbsp;IMEC Netherlands</strong>, <i>"Computation-In-Memory for Edge-AI in Healthcare"</i>
+					</li>
+					<li>
+						<strong>[2021]&nbsp;&nbsp;GlobalFoundries visit to TU Delft</strong>, <i>"Non-ideality Mitigation for Computation-In-Memory"</i>
+					</li>
+				</ul>
+				
+            </div>
+			
+			
+    </div> <footer class="footer text-center bg-light mt-5">
+        <div class="container">
+            &copy; Sumit Diware, 2026
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+	<script>
+		function goToSection(tabId, sectionId) {
+			var tabTrigger = document.getElementById(tabId);
+			
+			if (tabTrigger) {
+				var tab = new bootstrap.Tab(tabTrigger);
+				
+				tabTrigger.addEventListener('shown.bs.tab', function () {
+					var element = document.getElementById(sectionId);
+					if (element) {
+						element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+					}
+				}, { once: true });
+
+				tab.show();
+			}
+		}
+	</script>
+
+
+	<script>	
+	function updateBrandVisibility(targetId) {
+    const brand = document.getElementById('navbarBrandName');
+    if (brand) {
+        if (targetId === '#pills-about') {
+            brand.classList.add('brand-hidden');
+        } else {
+            brand.classList.remove('brand-hidden');
+        }
+		}
+	}
+
+
+	function activateTabFromHash() {
+		const hash = window.location.hash || '#pills-about';
+		const tabTriggerEl = document.querySelector(`a[data-bs-target="${hash}"]`);
+		
+		if (tabTriggerEl) {
+			const tab = bootstrap.Tab.getOrCreateInstance(tabTriggerEl);
+			tab.show();
+			updateBrandVisibility(hash);
+		}
+	}
+
+
+	document.querySelectorAll('a[data-bs-toggle="pill"]').forEach(tabEl => {
+		tabEl.addEventListener('shown.bs.tab', function (event) {
+			const targetId = event.target.getAttribute('data-bs-target');
+			
+			window.scrollTo(0, 0);
+			updateBrandVisibility(targetId); 
+
+			if (window.location.hash !== targetId) {
+				history.pushState(null, null, targetId);
+			}
+		});
+	});
+
+	window.addEventListener('popstate', activateTabFromHash);
+	window.addEventListener('DOMContentLoaded', activateTabFromHash);
+</script>
+
+</body>
+</html>
