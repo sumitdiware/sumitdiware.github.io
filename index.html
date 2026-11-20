@@ -46,9 +46,21 @@
 		.news-item { border-left: 3px solid #007bff; padding-left: 15px; margin-bottom: 20px; }
         .news-date { font-weight: bold; color: #6c757d; display: block; margin-bottom: 5px; }
 		
-		.alumni-list {list-style: none; padding: 0; column-count: 4; column-gap: 20px;}
-		/* Responsive adjustment for smaller screens */
-		@media (max-width: 768px) {.alumni-list {column-count: 2;} }
+		.alumni-list {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			row-gap: 0px;
+			column-gap: 0px; 
+		}
+
+		.alumni-list > li { margin: 0; }
+
+		@media (max-width: 768px) {
+			.alumni-list {grid-template-columns: repeat(2, minmax(0, 1fr));	column-gap: 20px;}
+		}
 		
     
 		#publications {margin: 0; padding: 0;}
